@@ -1,0 +1,70 @@
+
+
+
+<div  *ngIf="loaded">
+  <div *ngFor="let news of newsList;let i=index">
+  
+    
+    <ion-card mode="ios" style="margin:7px;background-color: white;">
+      <ion-card-content style="padding: 0px !important;background-color: white;">
+        <ion-grid style="margin: 0px !important;padding: 0px !important;">
+         
+    
+          <ion-row  style="margin: 0px !important;padding: 0px !important;">
+            <ion-col size="12" style="margin: 0px !important;padding: 0px !important;">
+              <img src='{{ baseUrl+""+news.ImagePath }}'
+              style="height: 200px;width: 100%;" />
+            </ion-col>
+    
+          </ion-row>
+          <ion-row>
+    
+            
+            <ion-col size="12">           
+              <div class="customelabel" style="font-size:15px;font-weight: 800;">
+                <span *ngIf="languageId=='1'">
+                  {{ news.NewsTitle }}
+                </span>
+                <span *ngIf="languageId=='2'">
+                  {{ news.NewsTitleM }}
+                </span>
+              </div>
+              <div class="" style="font-size:12px;float:left;color:black;padding-top:10px;">
+                <span *ngIf="languageId=='1'">
+                  {{ news.NewsDescription }}
+                 </span> 
+                 <span *ngIf="languageId=='2'">
+                  {{ news.NewsDescriptionM }}
+                 </span> 
+              </div>
+              
+            </ion-col>
+          </ion-row>
+  
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  
+  
+  </div>
+</div>
+
+
+<div *ngIf="!loaded">
+  <ion-item *ngFor="let category of [].constructor(10)">
+    <ion-thumbnail slot="start">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-thumbnail>
+    <ion-label>
+      <h3>
+        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+      </h3>
+      <p>
+        <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+      </p>
+    </ion-label>
+  </ion-item>
+</div>

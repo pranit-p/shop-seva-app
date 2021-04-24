@@ -1,0 +1,69 @@
+<ion-header>
+        <ion-toolbar  style="height: 65px;">
+          
+          <ion-title style="font-size: 40px !important;padding-top:15px;">
+            <div style="font-size:23px;font-weight:800;margin-top:5px;">
+                      <span style="color:#2a425c;">SHOP</span>   
+                      <span style="color:#f37221;"> SEVA</span>
+                    </div>
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+
+<ion-content style="--background:#e6dfdd;">
+
+        <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+                <ion-refresher-content></ion-refresher-content>
+              </ion-refresher>
+            
+
+      
+<ion-grid>
+<ion-row>
+
+
+
+
+
+<ion-col  size="12" *ngFor="let gaon of gaonlist" >
+
+<ion-card mode="ios"  (click)="goanselected(gaon.GaonID,gaon.IsActive)" style="background-color:white;color:#2a425c;padding:0px !important;border-right:5px solid #f37221;border-left:5px solid #2a425c;">      
+        <ion-card-content style="padding:10px !important;color: black;font-size:20px;font-weight: 700;">
+                <ion-grid>
+                        <ion-row>
+                                <ion-col size="8" style="background-color:white;color:#2a425c;">
+                                        <span *ngIf="languageid=='1'">
+                                                {{ gaon.GaonName }}        
+                                        </span>
+                                        <span *ngIf="languageid=='2'">
+                                                {{ gaon.GaonNameM }}        
+                                        </span>
+                                </ion-col>
+                                <ion-col size="4" style="text-align: right;color:#2a425c;">
+                                   
+                                        <ion-icon name="hand-right-sharp"></ion-icon>
+
+                                </ion-col>
+                        </ion-row>
+                </ion-grid>
+
+                
+                
+                <div *ngIf="gaon.IsActive==0" style="font-size:12px !important;position:absolute;bottom:2px;right:5px;">
+                     <span *ngIf="languageid=='1'">
+                        comming soon...   
+                     </span>
+                     <span *ngIf="languageid=='2'">
+                        लवकरच येत आहे...   
+                     </span>
+                </div> 
+        </ion-card-content>
+      </ion-card>
+</ion-col>  
+        
+</ion-row>
+</ion-grid>
+
+
+</ion-content>

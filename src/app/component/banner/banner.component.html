@@ -1,0 +1,17 @@
+
+
+
+<ion-slides #mySlider  *ngIf="loaded" mode="ios" pager="true" [options]="slideOpts">
+  <ion-slide *ngFor="let banner of bannerList" style="padding-top:5px;">
+    <ion-card style="width:97%;height:100%;box-shadow: 0px 0px 0px 0px white;border-radius:10px;padding: 0px !important;margin:0px !important;">
+      <img src='{{ baseUrl+""+banner.ImagePath }}' class="slide-image" (click)="gotoshop(banner.ShopID)"/>
+    </ion-card>
+  </ion-slide>
+</ion-slides>
+
+<ion-item *ngIf="!loaded">
+<ion-thumbnail mode="ios" style="height: 170px;width: 100%;">
+  <ion-skeleton-text animated></ion-skeleton-text>
+</ion-thumbnail> 
+</ion-item>
+

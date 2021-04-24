@@ -1,0 +1,164 @@
+
+
+<ion-header>
+    <ion-toolbar>  
+      <ion-buttons slot="start">
+        <ion-back-button icon="chevron-back-outline"></ion-back-button>
+      </ion-buttons> 
+      <ion-title  style="text-align: left !important;"><div style="font-size:23px;font-weight:800;margin-top:5px;">
+                <span style="color:#2a425c;">SHOP</span>   
+                <span style="color:#f37221;"> SEVA</span>
+              </div></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+
+
+
+ 
+<div *ngIf="loaded" >
+
+  <div class="container" style="border-bottom: 1px solid #2a425c;">
+      <div class="box">
+        <img src="{{  baseUrl+''+shopdetail.shopBannerImage }}" style="width: 100%;max-height: 230px;min-height: 230px;">
+      </div>
+      <div class="box stack-top">
+        <img src="{{  baseUrl+''+shopdetail.LogoImagePath }}" style="width: 100%;height: 100%;border-radius:70px;border:1px solid black;">
+      </div>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="shop-title">
+        <ion-icon class="customelabel" name="business-outline"></ion-icon> 
+        <span class="customelabel" *ngIf="languageId=='1'">
+          {{ shopdetail.ShopName }}
+        </span>
+        <span class="customelabel" *ngIf="languageId=='2'">
+          {{ shopdetail.ShopNameM }}
+        </span>
+        
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-icon class="customelabel" name="person-circle-outline"></ion-icon>
+        <span class="customelabel" *ngIf="languageId=='1'">
+          {{ shopdetail.MerchantName }}
+        </span>
+        <span class="customelabel"  *ngIf="languageId=='2'">
+          {{ shopdetail.MerchantNameM }}
+        </span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-icon class="customelabel" name="location-outline"></ion-icon>
+        <span class="customelabel" *ngIf="languageId=='1'">
+          {{ shopdetail.MerchantAddress }}
+        </span>
+        <span class="customelabel"  *ngIf="languageId=='2'">
+          {{ shopdetail.MerchantAddressM }}
+        </span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-icon class="customelabel" name="call-outline"></ion-icon>
+        <span class="customelabel">
+          {{ shopdetail.MerchantMobileNo }}
+        </span>
+      
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col>
+        <ion-icon class="customelabel" name="cart-outline"></ion-icon>  
+        <span class="customelabel" *ngIf="languageId=='1'">
+          Home delivery available
+        </span>
+        <span class="customelabel"  *ngIf="languageId=='2'">
+          घरपोच सेवा उपलब्ध 
+        </span>
+        
+        
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+</div> 
+
+
+
+<div *ngIf="!loaded">
+  <div>
+  <ion-thumbnail slot="start" style="height: 120px;width:100%;">
+    <ion-skeleton-text animated></ion-skeleton-text>
+  </ion-thumbnail>
+</div>
+
+<ion-grid>
+  <ion-row>
+    <ion-col class="shop-title">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-col>
+  </ion-row>
+  <ion-row >
+    <ion-col>
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-col>
+  </ion-row>
+  
+</ion-grid>
+
+
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </ion-content>
+  <ion-footer style="background-color:white !important;" class="ion-no-border">
+    <ion-button expand="full" mode="ios" strong shape="round" style="font-size:19px !important;--background:#dcd8d7 !important;font-weight: 800;"  (click)="callNow(shopdetail.MerchantMobileNo)">
+      <span  *ngIf="languageId=='1'">
+        <span style="color:#2a425c;">Call  </span> <span style="color:#f37221;"> Now</span>
+      </span>
+      <span  *ngIf="languageId=='2'">
+        <span style="color:#2a425c;">कॉल  </span> <span style="color:#f37221;"> करा</span>
+      </span>
+
+      
+    </ion-button>
+  </ion-footer>

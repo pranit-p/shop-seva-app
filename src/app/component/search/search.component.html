@@ -1,0 +1,79 @@
+<ion-header no-border no-shadow class="ion-no-border">
+  <ion-toolbar no-border no-shadow>
+    <ion-buttons slot="start" style="--padding-start:0px !important;--padding-end:0px !important;padding: 0px !important;">
+      <ion-back-button icon="chevron-back-outline"  style="--padding-start:0px !important;--padding-end:0px !important;padding: 0px !important;"></ion-back-button>
+    </ion-buttons>
+    <ion-title  style="--padding-start:0px !important;--padding-end:0px !important;padding: 0px !important;padding-top: 15px !important;">
+      <ion-searchbar #focusInput  style="border-radius: 30px;" mode="ios"   id="searchTerm"  (ionChange)="setFilteredItems()" placeholder="Search Anything"></ion-searchbar>
+    </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content style="--background:white;">
+
+
+
+ 
+
+
+<div *ngIf="loaded">
+  
+  <ion-card   *ngFor="let item of filterData" (click)="gotowindow(item.MerchantID,item.isShop,item.IsCategory)">
+    <ion-card-header >
+      <ion-card-subtitle style="color: #2a425c;">
+        <span *ngIf="languageId=='1'">
+          {{ item.englishname }}
+        </span>
+        <span *ngIf="languageId=='2'">
+          {{ item.marathiname }}
+        </span>
+      </ion-card-subtitle>      
+    </ion-card-header>
+  
+  
+  </ion-card>
+</div>
+<div *ngIf="filterData.length==0" style="text-align:center;font-size: 25px;">
+  <ion-card class="ion-no-border ion-no-shadow"  style="box-shadow:0px 0px 0px 0px white !important;margin: 0px !important;position:absolute;top:30%;width: 100%;">
+    <ion-card-content style="text-align: center;background-color: white !important;height: 100% !important;">
+      <img src='../assets/logo.jpg' style="height: 70px;width: 70px;border-radius: 10px;" />
+      
+      <div style="font-size:23px;font-weight:800;margin-top:5px;">
+        <span style="color:#2a425c;">SHOP</span>   
+        <span style="color:#f37221;"> SEVA</span>
+      </div>
+
+     <div style="font-size:18px;color:black;">
+      <span *ngIf="languageId=='1'">
+        SEARCH
+      </span>
+      <span *ngIf="languageId=='2'">
+        शोधा
+      </span>
+  
+    </div>
+    </ion-card-content>
+  </ion-card>
+</div>
+
+
+  <div *ngIf="!loaded">
+    <ion-item *ngFor="let category of [].constructor(10)">
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </div>

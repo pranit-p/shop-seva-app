@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>   
+    <ion-title style="text-align: left !important;"><div style="font-size:23px;font-weight:800;margin-top:5px;">
+                <span style="color:#2a425c;">SHOP</span>   
+                <span style="color:#f37221;"> SEVA</span>
+              </div></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="customebackground">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+
+
+
+
+
+
+
+  <div *ngIf="loaded">
+<div *ngFor="let shop of employeelist;let i=index">
+  
+
+  <ion-card mode="ios" style="margin:7px;background-color: white;" routerLink="../../../home/shopdetail/{{ shop.MerchantID }}"  >
+    <ion-card-content style="padding: 10px !important;background-color: white;">
+      <ion-grid style="margin: 0px !important;padding: 0px !important;">
+        <ion-row>
+  
+          <ion-col size="2">
+            
+            <img src='{{ baseUrl+""+shop.shopBannerImage }}'
+            style="height: 40px;width: 40;border-radius:35px;border: 1px solid #f3ccda;"/>
+            
+          </ion-col>
+          <ion-col size="10">           
+            <div class="customelabel" style="font-size:19px;font-weight: 800;">
+              <span *ngIf="languageId=='1'">
+                {{ shop.ShopName }}
+              </span>
+              <span *ngIf="languageId=='2'">
+                {{ shop.ShopNameM }}
+              </span>
+            </div>
+            <div class="customelabel" style="float:left;">
+              <span *ngIf="languageId=='1'">
+                {{ shop.MerchantName }}
+               </span> 
+               <span *ngIf="languageId=='2'">
+                {{ shop.MerchantNameM }}
+               </span> 
+            </div>
+            <div *ngIf="shop.IsHomeDelivery=='1'" style="float: right;text-align: right;font-size:13px;"> 
+              <span  *ngIf="languageId=='1'">
+                <ion-icon name="cart-outline"></ion-icon> Home Delivery Available
+              </span>
+              <span  *ngIf="languageId=='2'">
+                <ion-icon name="cart-outline"></ion-icon>  घरपोच सेवा उपलब्ध 
+              </span>
+            </div>
+            
+          </ion-col>
+        </ion-row>
+  
+        <ion-row  style="margin: 0px !important;padding: 0px !important;">
+          <ion-col size="12" style="margin: 0px !important;padding: 0px !important;border-top:1px solid rgb(187, 185, 185);">
+            <img src='{{ baseUrl+""+shop.LogoImagePath }}'
+            style="height: 180px;width: 100%;" />
+          </ion-col>
+  
+        </ion-row>
+     
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+
+</div>
+</div>
+
+<div *ngIf="!loaded">
+  <ion-item *ngFor="let category of [].constructor(10)">
+    <ion-thumbnail slot="start">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </ion-thumbnail>
+    <ion-label>
+      <h3>
+        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+      </h3>
+      <p>
+        <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+      </p>
+      <p>
+        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+      </p>
+    </ion-label>
+  </ion-item>
+</div>
+
+
+
+
+
+
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+

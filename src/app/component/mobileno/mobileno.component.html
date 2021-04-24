@@ -1,0 +1,91 @@
+
+      <ion-grid style="margin-top:30px;">
+        <ion-row>
+          <ion-col size="1">
+            
+          </ion-col>
+          <ion-col size="10">
+            <ion-label class="customelabel" >  {{ 'login.username' | translate }}</ion-label>      
+            <ion-input class="custometextbox"  id="mobileno" autocomplete=off   type="number"> &nbsp; +91 &nbsp;</ion-input>
+          </ion-col>
+          <ion-col size="1">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="1">
+            
+          </ion-col>
+          <ion-col size="10">
+            <ion-label class="customelabel">{{ 'login.password' | translate }}</ion-label>  
+    
+
+            <ion-input class="custometextbox"  type="password" id="password"  > </ion-input>
+          </ion-col>
+          <ion-col size="1">
+            
+          </ion-col>
+          
+        </ion-row>
+
+
+
+        <ion-row>
+          <ion-col size="1">
+            
+          </ion-col>
+          <ion-col size="10" style="font-size: 13px;text-align: right;" >
+            <span routerLink="../forgetpassword" style="color:#2a425c !important;">
+                forget password
+            </span>
+          </ion-col>
+          <ion-col size="1">
+            
+          </ion-col>
+          
+        </ion-row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <ion-row> 
+          <ion-col size="1">
+            
+          </ion-col>
+          <ion-col size="10">
+            
+            <ion-button class="darkcolor" mode="ios" (click)="loginTomyaccount()"  expand="full"  style="font-size: 13px !important;" shape="round" >{{ 'login.verifybtn' | translate }}</ion-button>
+            
+          </ion-col>
+          <ion-col size="1">
+            
+          </ion-col>
+          
+        </ion-row>
+
+        <ion-row  style="">
+          <ion-col size="1">
+            
+          </ion-col>
+          <ion-col size="10">
+            
+            <ion-button class="outlinebox" routerLink="../register"  mode="ios" expand="full" shape="round" style="font-size: 13px !important;">{{ 'register.registerbtn' | translate }}</ion-button>
+            
+          </ion-col>
+          <ion-col size="1">
+            
+          </ion-col>
+          
+        </ion-row>
+
+      </ion-grid>

@@ -1,0 +1,67 @@
+
+
+<ion-header class="ion-no-border">
+  <ion-toolbar style="text-align: center;">  
+    <ion-buttons slot="start">
+      <ion-back-button icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons> 
+    <ion-title style="font-size: 15px;font-weight: 900;text-align: left;" class="customefontcolor">
+      <span  *ngIf="languageId=='1'">About Us</span>
+      <span  *ngIf="languageId=='2'">आमच्याबद्दल</span>
+      
+    
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card no-border no-shadow class="ion-no-border" style="margin: 0px !important;height: 150px;width: 100%;background-color:#e6dfdd; webkit-box-shadow: none;
+box-shadow: none;">
+  <ion-card-content style="text-align: center;color: #f37221;padding-left: 50px;padding-right: 50px;padding-top: 30px; ">
+    <img src='../../assets/logo.jpg' style="height: 70px;width: 70px;border-radius: 10px;" />
+    <!-- <ion-icon name="person-circle-outline"></ion-icon> -->
+
+    <div style="font-size:23px;font-weight:800;margin-top:5px;">
+      <span style="color:#2a425c;">SHOP</span>   
+      <span style="color:#f37221;"> SEVA</span>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+
+
+<ion-card mode="ios" no-border no-shadow class="ion-no-border" style=" webkit-box-shadow: none;
+box-shadow: none;margin: 0px !important;">
+  <ion-card-header>
+    <ion-card-title style="--color:#2a425c !important;">Onerio Solution</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+
+    <ion-list>  
+      <ion-item lines="none" class="customefontcolor">
+        <ion-label  strong>Mirajgaon - 414401</ion-label>
+        <ion-icon slot="start" class="customefontcolor"  name="location-sharp"></ion-icon>
+      </ion-item>
+      <ion-item lines="none" class="customefontcolor">
+        <ion-label>oneriasolution@gmail.com</ion-label>
+        <ion-icon  slot="start" class="customefontcolor" name="mail-open-sharp"></ion-icon>
+      </ion-item>
+      <ion-item lines="none" class="customefontcolor" (click)="callNow('9503349474')"> 
+        <ion-label>+91 9503349474 </ion-label>
+        <ion-icon slot="start" class="customefontcolor" name="call-sharp"></ion-icon>
+      </ion-item>
+      
+    
+    
+    </ion-list>
+
+
+
+  </ion-card-content>
+</ion-card>
+
+
+</ion-content>
+

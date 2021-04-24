@@ -1,0 +1,103 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+
+.darkcolor
+{
+    --background:#2a425c !important;
+    --background-activated:#2a425c !important;
+    --color:white;
+    text-align: center;
+}
+
+.outlinebox
+{
+    --background:white !important;
+    --background-activated:white !important;
+    --color:#2a425c !important;
+    text-align: center;
+    border:1px solid #2a425c;
+    border-radius:50px !important;
+ 
+}
+
+.customefontcolor
+{
+    color:#2a425c !important;
+    font-size:18px !important;
+}
+
+.custometextbox
+{
+    border-radius:50px !important;
+    padding: 2px !important;
+    color:#2a425c !important;
+    border:1px solid #cecaca; 
+
+}
+.customelabel
+{
+    color:#2a425c !important;
+}
+
+
+
+
+
+
+
+
+
+// .customebox
+// {
+//     --background-activated:#ff6600  !important;
+//     --background:#ff6600;
+//     color: white;
+// }
+
+// .item-has-focus
+// {
+  
+//      --background:#fff0e6 !important;
+//     --highlight-color-focused:#ff6600 !important;
+    
+// }
+
+// .customebackground
+// {
+//     // --background:#ffe0cc;
+// }
+
+
+// ion-item.item-has-focus > ion-label
+// {
+//     font-size:20px !important;
+//     padding-bottom: 5px !important;
+//     color: #ff6600 !important;
+// }
+  

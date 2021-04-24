@@ -1,0 +1,73 @@
+
+
+<ion-header class="ion-no-border">
+  <ion-toolbar style="text-align: center;">  
+    <ion-buttons class="customefontcolor" slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons> 
+    <ion-title style="font-size: 15px;font-weight: 900;text-align: left;" class="customefontcolor">{{ Settinglabel }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card style="margin: 0px !important;height: 150px;width: 100%;background-color:#e6dfdd;">
+  <ion-card-content style="text-align: center;color: #f37221;padding-left: 50px;padding-right: 50px;padding-top: 30px; ">
+    <img src='../../assets/logo.jpg' style="height: 70px;width: 70px;border-radius: 10px;" />
+    <!-- <ion-icon name="person-circle-outline"></ion-icon> -->
+
+    <div style="font-size:23px;font-weight:800;margin-top:5px;">
+      <span style="color:#2a425c;">SHOP</span>   
+      <span style="color:#f37221;"> SEVA</span>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+
+<ion-card style="margin: 0px !important;height: 120px;width: 100%;">
+  <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="9">
+          <div  class="customefontcolor" style="font-size:20px;font-weight: bold;">
+              {{ Name }}</div>
+            <div  class="customefontcolor" style="font-size:15px;">    {{ mobileno }}</div>
+            
+        </ion-col>
+        <ion-col  size="3" style="text-align: right;">
+          <ion-button class="darkcolor" (click)="openeditprodile()">
+              {{ Editbtn }}
+          </ion-button>
+        </ion-col>
+        
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>
+
+
+
+<!-- List of Input Items -->
+<ion-list>  
+  <ion-item lines="none" class="customefontcolor" (click)="changelanguage()">
+    <ion-label  strong>{{  setting1 }}</ion-label>
+    <ion-icon slot="start" class="customefontcolor"  name="mic"></ion-icon>
+  </ion-item>
+  <ion-item lines="none" class="customefontcolor" (click)="changegaon()">
+    <ion-label>{{  setting2 }}</ion-label>
+    <ion-icon  slot="start" class="customefontcolor" name="location-sharp"></ion-icon>
+  </ion-item>
+  <ion-item lines="none" class="customefontcolor" routerLink="../aboutus">
+    <ion-label>{{  setting3 }}</ion-label>
+    <ion-icon slot="start" class="customefontcolor" name="people-sharp"></ion-icon>
+  </ion-item>
+  <ion-item lines="none" class="customefontcolor" routerLink="../privacypolicy">
+    <ion-label>{{  setting4 }}</ion-label>
+    <ion-icon slot="start" class="customefontcolor" name="lock-closed"></ion-icon>
+  </ion-item>
+
+
+</ion-list>
+
+</ion-content>
+

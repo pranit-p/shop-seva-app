@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar  style="height: 65px;">
+    
+    <ion-title style="font-size: 40px !important;padding-top:15px;">
+      <div style="font-size:23px;font-weight:800;margin-top:5px;">
+                <span style="color:#2a425c;">SHOP</span>   
+                <span style="color:#f37221;"> SEVA</span>
+              </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="customebackground">
+   
+    
+  <ion-grid style="margin-top:20px;">
+    <ion-row>
+      <ion-col size="1">
+        
+      </ion-col>
+      <ion-col size="10">
+        <ion-label class="customelabel" >  {{ 'register.fullname' | translate }}</ion-label>      
+        <ion-input class="custometextbox" (click)="removeerror('editfullname')"   autofocus=false autocomplete=off type="text"  id="editfullname">&nbsp; </ion-input>
+        <div style="color:red;width: 100%;text-align: right;" id="editfullname_error" class="errormessage"></div>
+      </ion-col>
+      <ion-col size="1">
+        
+      </ion-col>
+      
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="1">
+        
+      </ion-col>
+      <ion-col size="10">
+        <ion-label class="customelabel" >  {{ 'register.password' | translate }}</ion-label>      
+        <ion-input class="custometextbox"   autofocus=false autocomplete=off id="editpasswordofregister"      type="password" (click)="removeerror('editpassword')">&nbsp; </ion-input>
+        <div style="color:red;width: 100%;text-align: right;" id="editpassword_error"  class="errormessage"></div>
+      </ion-col>
+      <ion-col size="1">
+        
+      </ion-col>
+      
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="1">
+        
+      </ion-col>
+      <ion-col size="10">
+        <ion-label class="customelabel" >  {{ 'register.confirmpassword' | translate }}</ion-label>      
+        <ion-input class="custometextbox"   autofocus=false  autocomplete=off id="editconfirmpassword"   type="password" (click)="removeerror('editconfirmpassword')">&nbsp; </ion-input>
+        <div style="color:red;width: 100%;text-align: right;" id="editconfirmpassword_error"  class="errormessage"></div>
+      </ion-col>
+      <ion-col size="1">
+        
+      </ion-col>
+      
+    </ion-row>
+
+
+
+    <ion-row  style="">
+      <ion-col size="1">
+        
+      </ion-col>
+      <ion-col size="10">
+        
+        <ion-button class="darkcolor" mode="ios" (click)="editnext()"  expand="full" shape="round" style="font-size: 13px !important;">{{ Updatebun }}</ion-button>
+        
+      </ion-col>
+      <ion-col size="1">
+        
+      </ion-col>
+      
+    </ion-row>
+    <ion-row  style="">
+      <ion-col size="1">
+        
+      </ion-col>
+      <ion-col size="10">
+        
+        <ion-button class="outlinebox" mode="ios"  (click)="closemodelforchange()"  expand="full" shape="round" style="font-size: 13px !important;">{{ closebtn }}</ion-button>
+
+      </ion-col>
+      <ion-col size="1">
+        
+      </ion-col>
+      
+    </ion-row>
+
+  </ion-grid>
+
+

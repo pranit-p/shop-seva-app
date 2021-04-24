@@ -1,0 +1,32 @@
+{
+    "login": {
+        "username": "Mobile Number",
+        "password": "Password",
+        "verifybtn":"verify"
+    },
+    "register": {
+        "fullname": "Name",
+        "mobile": "Mobile Number",
+        "password": "Password",
+        "confirmpassword": "Confirm Password",        
+        "registerbtn":"CREATE ACCOUNT",
+        "otp":"One Time Password"
+    },
+
+    "loginpage": {
+        "login": "login",
+        "register": "register"
+
+    },
+      "mainpage": {
+          "welcome":"welcome",
+        "icon1": "Shop list",
+        "icon6": "News",        
+        "icon2": "Service list",
+        "icon3": "profile",
+        "icon4": "Setting",
+        "icon5": "Logout"
+
+    }
+
+}

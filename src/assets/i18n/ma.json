@@ -1,0 +1,32 @@
+{
+    "login": {
+        "username": "मोबाइल नंबर ",
+        "password": "संकेतशब्द",
+        "verifybtn":"सत्यापित करा"
+    },
+    "register": {
+        "fullname": "नाव ",
+        "mobile": "मोबाइल नंबर  ",
+        "password": "संकेतशब्द",
+        "confirmpassword": "संकेतशब्दाची पुनरपुष्टी",        
+        "registerbtn":"नोंदणी करा"
+
+    },
+    "loginpage": {
+        "login": "लॉगिन",
+        "register": "नोंदणी"
+
+    },
+    "mainpage": {
+        "welcome":"सुस्वागतम",
+      "icon1": "दुकानांची यादी",
+      "icon6": "बातम्या",  
+      "icon2": "सेवांची यादी",
+      "icon3": "प्रोफाइल",
+      "icon4": "सेटिंग",
+      "icon5": "बाहेर"
+      
+
+  }
+
+}

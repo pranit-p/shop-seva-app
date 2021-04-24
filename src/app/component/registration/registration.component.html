@@ -1,0 +1,104 @@
+<ion-header no-border no-shadow class="ion-no-border">
+  <!-- <ion-toolbar  style="--background: #e6dfdd !important;">
+    
+  </ion-toolbar> -->
+  <ion-toolbar   style="height: 130px;--background: #e6dfdd !important;padding-top:15px;">
+    <ion-buttons slot="start">
+      <ion-back-button icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-size: 40px !important;text-align: center;background-color: #e6dfdd !important;">
+      <img src='../assets/logo.jpg' style="height: 70px;width: 70px;border-radius: 10px;" />
+
+      <div style="font-size:23px;font-weight:800;margin-top:5px;">
+                <span style="color:#2a425c;">SHOP</span>   
+                <span style="color:#f37221;"> SEVA</span>
+              </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="customebackground">
+   
+    
+  <ion-grid style="margin-top:20px;">
+    <ion-row>
+      <ion-col size="1">
+        
+      </ion-col>
+      <ion-col size="10">
+        <ion-label class="customelabel" >  {{ 'register.fullname' | translate }}</ion-label>      
+        <ion-input class="custometextbox" (click)="removeerror('fullname')"   autofocus=false autocomplete=off type="text"  id="fullname">&nbsp; </ion-input>
+        <div style="color:red;width: 100%;text-align: right;" id="fullname_error" class="errormessage"></div>
+      </ion-col>
+      <ion-col size="1">
+        
+      </ion-col>
+      
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="1">
+        
+      </ion-col>
+      <ion-col size="10">
+        <ion-label class="customelabel" >  {{ 'register.mobile' | translate }}</ion-label>      
+        <ion-input class="custometextbox" (click)="removeerror('mobleno')"   autofocus=false autocomplete=off type="number"  id="mobleno">&nbsp; +91  </ion-input>
+        <div style="color:red;width: 100%;text-align: right;" id="mobleno_error"  class="errormessage"></div>
+      </ion-col>
+      <ion-col size="1">
+        
+      </ion-col>
+      
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col size="1">
+        
+      </ion-col>
+      <ion-col size="10">
+        <ion-label class="customelabel" >  {{ 'register.password' | translate }}</ion-label>      
+        <ion-input class="custometextbox"   autofocus=false autocomplete=off id="passwordofregister"      type="password" (click)="removeerror('password')">&nbsp; </ion-input>
+        <div style="color:red;width: 100%;text-align: right;" id="password_error"  class="errormessage"></div>
+      </ion-col>
+      <ion-col size="1">
+        
+      </ion-col>
+      
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="1">
+        
+      </ion-col>
+      <ion-col size="10">
+        <ion-label class="customelabel" >  {{ 'register.confirmpassword' | translate }}</ion-label>      
+        <ion-input class="custometextbox"   autofocus=false  autocomplete=off id="confirmpassword"   type="password" (click)="removeerror('confirmpassword')">&nbsp; </ion-input>
+        <div style="color:red;width: 100%;text-align: right;" id="confirmpassword_error"  class="errormessage"></div>
+      </ion-col>
+      <ion-col size="1">
+        
+      </ion-col>
+      
+    </ion-row>
+
+    
+
+    <ion-row  style="">
+      <ion-col size="1">
+        
+      </ion-col>
+      <ion-col size="10">
+        
+        <ion-button class="darkcolor" mode="ios" (click)="next()"  expand="full" shape="round" style="font-size: 13px !important;">{{ 'register.registerbtn' | translate }}</ion-button>
+        
+      </ion-col>
+      <ion-col size="1">
+        
+      </ion-col>
+      
+    </ion-row>
+
+  </ion-grid>
+
+
